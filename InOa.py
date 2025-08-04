@@ -24,14 +24,9 @@ def add_pwa_config():
     <link rel="manifest" href="https://raw.githubusercontent.com/aswanigopinathmg-tech/Streamlit/main/manifest.json">
 
     <!-- iOS / Safari -->
-    <link rel="apple-touch-icon" sizes="180x180" href="https://github.com/aswanigopinathmg-tech/Streamlit/blob/main/ios-img.png">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Lab Management System">
-
-    <!-- General -->
-    <meta name="theme-color" content="#000000">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/aswanigopinathmg-tech/Streamlit/main/ios-img-180.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://raw.githubusercontent.com/aswanigopinathmg-tech/Streamlit/main/ios-img-152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://raw.githubusercontent.com/aswanigopinathmg-tech/Streamlit/main/ios-img-120.png">
     """, unsafe_allow_html=True)
 
 # Call the function at the top of your Streamlit script
