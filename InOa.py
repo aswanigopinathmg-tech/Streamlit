@@ -17,43 +17,31 @@ st.set_page_config(
 
 
 # PWA Configuration
+import streamlit as st
 def add_pwa_config():
     st.markdown("""
-    <link rel="manifest" href="data:application/json;base64,{}">
-    <meta name="theme-color" content="#000000">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Lab Management System">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    """.format(
-        base64.b64encode(json.dumps({
-            "name": "Lab Management System",
-            "short_name": "LabApp",
-            "start_url": "/",
-            "display": "standalone",
-            "background_color": "#ffffff",
-            "theme_color": "#000000",
-            "icons": [
-                {
-                    "src": "https://img.icons8.com/emoji/192/microscope-emoji.png",
-                    "sizes": "192x192",
-                    "type": "image/png"
-                },
-                {
-                    "src": "https://img.icons8.com/emoji/512/microscope-emoji.png",
-                    "sizes": "512x512",
-                    "type": "image/png"
-                }
-            ]
-        }).encode()).decode()
-    ), unsafe_allow_html=True)
+    <!-- Android / Chrome -->
+    <link rel="manifest" href="https://raw.githubusercontent.com/aswanigopinathmg-tech/Streamlit/main/manifest.json">
 
+    <!-- iOS / Safari -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://img.icons8.com/emoji/180/microscope-emoji.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Lab Management System">
+
+    <!-- General -->
+    <meta name="theme-color" content="#000000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    """, unsafe_allow_html=True)
+
+# Call the function at the top of your Streamlit script
 add_pwa_config()
+
 
 # Custom CSS for responsive design
 st.markdown("""
 <script>
-const manifestUrl = "https://your-public-url.com/manifest.json";
+const manifestUrl = "https://raw.githubusercontent.com/aswanigopinathmg-tech/Streamlit/main/manifest.json";
 const link = document.createElement('link');
 link.rel = 'manifest';
 link.href = manifestUrl;
