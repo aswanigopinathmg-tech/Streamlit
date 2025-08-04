@@ -52,63 +52,13 @@ add_pwa_config()
 
 # Custom CSS for responsive design
 st.markdown("""
-<style>
-    .main-header {
-        background: linear-gradient(90deg, #1f77b4, #ff7f0e);
-        padding: 1rem;
-        border-radius: 10px;
-        color: white;
-        text-align: center;
-        margin-bottom: 2rem;
-    }
-
-    .status-accepted { 
-        background-color: #d4edda; 
-        color: #155724; 
-        padding: 0.25rem 0.5rem; 
-        border-radius: 4px; 
-        font-size: 0.8rem;
-    }
-
-    .status-pending { 
-        background-color: #fff3cd; 
-        color: #856404; 
-        padding: 0.25rem 0.5rem; 
-        border-radius: 4px; 
-        font-size: 0.8rem;
-    }
-
-    .status-rejected { 
-        background-color: #f8d7da; 
-        color: #721c24; 
-        padding: 0.25rem 0.5rem; 
-        border-radius: 4px; 
-        font-size: 0.8rem;
-    }
-
-    .metric-card {
-        background: white;
-        padding: 1rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        margin: 0.5rem 0;
-    }
-
-    @media (max-width: 768px) {
-        .main-content {
-            padding: 0.5rem;
-        }
-
-        .stButton > button {
-            width: 100%;
-            margin: 0.25rem 0;
-        }
-
-        .stSelectbox, .stTextInput, .stNumberInput {
-            margin-bottom: 1rem;
-        }
-    }
-</style>
+<script>
+const manifestUrl = "https://your-public-url.com/manifest.json";
+const link = document.createElement('link');
+link.rel = 'manifest';
+link.href = manifestUrl;
+document.head.appendChild(link);
+</script>
 """, unsafe_allow_html=True)
 
 
