@@ -24,7 +24,7 @@ def add_pwa_config():
     <link rel="manifest" href="https://raw.githubusercontent.com/aswanigopinathmg-tech/Streamlit/main/manifest.json">
 
     <!-- iOS / Safari -->
-    <link rel="apple-touch-icon" sizes="180x180" href="https://img.icons8.com/emoji/180/microscope-emoji.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://github.com/aswanigopinathmg-tech/Streamlit/blob/main/ios-img.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Lab Management System">
