@@ -18,19 +18,17 @@ st.set_page_config(
 
 # PWA Configuration
 def add_pwa_config():
-    """Add PWA configuration for mobile app functionality"""
     st.markdown("""
-        <link rel="manifest" href="data:application/json;base64,{}">
-        <meta name="theme-color" content="#000000">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-title" content="Soul & Water App">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        """.format(
+    <link rel="manifest" href="data:application/json;base64,{}">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Lab Management System">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    """.format(
         base64.b64encode(json.dumps({
             "name": "Lab Management System",
-            "short_name": "LabManager",
-            "description": "Laboratory Test Management System",
+            "short_name": "LabApp",
             "start_url": "/",
             "display": "standalone",
             "background_color": "#ffffff",
@@ -49,7 +47,6 @@ def add_pwa_config():
             ]
         }).encode()).decode()
     ), unsafe_allow_html=True)
-
 
 add_pwa_config()
 
